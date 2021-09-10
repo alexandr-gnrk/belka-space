@@ -1,6 +1,6 @@
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-from . import models
+from ..models import models
 
 
 Image = pydantic_model_creator(models.Image, name='Image')
