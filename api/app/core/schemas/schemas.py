@@ -19,7 +19,8 @@ EmploymentStatusSchema = pydantic_model_creator(
 
 FacultyInSchema = pydantic_model_creator(
     models.Faculty, name='FacultyIn', exclude_readonly=True)
-FacultySchema = pydantic_model_creator(models.Faculty, name='Faculty')
+FacultySchema = pydantic_model_creator(
+    models.Faculty, name='Faculty', exclude=['graduates'])
 
 UserInSchema = pydantic_model_creator(
     models.User, name='UserIn', exclude_readonly=True)
