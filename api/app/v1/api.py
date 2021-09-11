@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
-from .endpoints import image, event
+from .endpoints import \
+    image, event, user, faculty, employment_status
 
 
 router = APIRouter(
@@ -9,3 +10,6 @@ router = APIRouter(
 
 router.include_router(image.router)
 router.include_router(event.router)
+router.include_router(user.router)
+router.include_router(faculty.router)
+router.include_router(employment_status.router)

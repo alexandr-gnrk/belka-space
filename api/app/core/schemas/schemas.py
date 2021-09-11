@@ -24,7 +24,8 @@ FacultySchema = pydantic_model_creator(
 
 UserInSchema = pydantic_model_creator(
     models.User, name='UserIn', exclude_readonly=True)
-UserSchema = pydantic_model_creator(models.User, name='User')
+UserSchema = pydantic_model_creator(
+    models.User, name='User', exclude=['events'])
 
 EventInSchema = pydantic_model_creator(
     models.Event, name='Event', exclude_readonly=True)
