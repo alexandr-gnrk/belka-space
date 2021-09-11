@@ -49,4 +49,4 @@ class Event(models.Model):
     description = fields.TextField()
     start_time = fields.DatetimeField()
     image = fields.OneToOneField('models.Image', related_name='event')
-    visitors = fields.ManyToManyField('models.User', related_name='events') 
+    visitors = fields.ManyToManyField('models.User', related_name='events')
