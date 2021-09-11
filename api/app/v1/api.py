@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from .endpoints import image
+from .endpoints import image, event
 
 
 router = APIRouter(
@@ -8,3 +8,4 @@ router = APIRouter(
     tags=['v1'])
 
 router.include_router(image.router)
+router.include_router(event.router)
