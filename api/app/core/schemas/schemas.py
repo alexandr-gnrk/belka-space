@@ -15,7 +15,7 @@ ImageSchema = pydantic_model_creator(
 EmploymentStatusInSchema = pydantic_model_creator(
     models.EmploymentStatus, name='EmploymentStatusIn', exclude_readonly=True)
 EmploymentStatusSchema = pydantic_model_creator(
-    models.EmploymentStatus, name='EmploymentStatus')
+    models.EmploymentStatus, name='EmploymentStatus', exclude=['users'])
 
 FacultyInSchema = pydantic_model_creator(
     models.Faculty, name='FacultyIn', exclude_readonly=True)
